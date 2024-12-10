@@ -17,9 +17,9 @@ public class Main {
         System.out.print("Enter your choice: ");
         int choice = sc.nextInt();
         System.out.println("-------------------------------------------------");
-        if(choice == 1){
+        if (choice == 1) {
             int r = 0;
-            while(r==0){
+            while (r == 0) {
                 System.out.println("\nAdmin Module!!");
                 System.out.println("1. Add Book");
                 System.out.println("2. Remove Book");
@@ -74,9 +74,7 @@ public class Main {
                     }
                 }
             }
-        }
-        else if(choice == 2)
-        {
+        } else if (choice == 2) {
             int r = 0;
             System.out.println("\nStudent Module!!");
             System.out.println("********");
@@ -86,39 +84,38 @@ public class Main {
             System.out.println("Enter id");
             int id = sc.nextInt();
             System.out.println("********");
-            if(sl.search(name,id))
-                {
-                    while(r==0)
-                    {
-                        System.out.println("1. Show all books");
-                        System.out.println("2. Borrow a book");
-                        System.out.println("3. return a book");
-                        System.out.println("Enter choice:");
-                        int student_choice = sc.nextInt();
-                        switch(student_choice){
-                            case 1:{
-                                library.show();
-                                break;
-                            }
-                            case 2:{
-                                System.out.println("Enter book id to borrow");
-                                int bid = sc.nextInt();
-                                if(library.search_book(bid))library.localBook.borrowed();
-                                else System.out.println("Book not found");
-                                break;
-                            }
-                            case 3:{
-                                System.out.println("Enter book id to return");
-                                int rid = sc.nextInt();
-                                if(library.search_book(rid))library.localBook.returned();
-                                else System.out.println("Book not found");
-                                break;
-                            }
+            if (sl.search(name, id)) {
+                while (r == 0) {
+                    System.out.println("1. Show all books");
+                    System.out.println("2. Borrow a book");
+                    System.out.println("3. return a book");
+                    System.out.println("Enter choice:");
+                    int student_choice = sc.nextInt();
+                    switch (student_choice) {
+                        case 1: {
+                            library.show();
+                            break;
+                        }
+                        case 2: {
+                            System.out.println("Enter book id to borrow");
+                            int bid = sc.nextInt();
+                            if (library.search_book(bid)) library.localBook.borrowed();
+                            else System.out.println("Book not found");
+                            break;
+                        }
+                        case 3: {
+                            System.out.println("Enter book id to return");
+                            int rid = sc.nextInt();
+                            if (library.search_book(rid)) library.localBook.returned();
+                            else System.out.println("Book not found");
+                            break;
                         }
                     }
                 }
-            else {System.out.println("Student not found please register");}
+            } else {
+                System.out.println("Student not found please register");
             }
         }
     }
 }
+
