@@ -16,17 +16,6 @@ public class Library {
 
     Scanner sc = new Scanner(System.in);
 
-
-//    public void create_book(Book a){
-//        library.add(a);
-//        System.out.println("Book added!😊");
-//
-//    }
-//
-//    public void remove_book(Book a){
-//        if(search_book(a.getSerial_no())) {library.remove(a);System.out.println("Book removed!😭");}
-//        else System.out.println("Book not found :(");
-//    }
     public boolean search_book(int a){
         int c = 0;
         for(int i=0; i<library.size(); i++){
