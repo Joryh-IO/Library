@@ -110,10 +110,12 @@ public class Main {
                             else System.out.println("Book not found");
                             break;
                         }
+                        default:r=10;
                     }
                 }
             } else {
                 System.out.println("Student not found please register");
+                System.out.println("code terminated");
             }
         }
     }
